@@ -2,6 +2,8 @@ import sys
 import os
 import argparse
 import whoosh
+from create_index import create_index
+from search_corpus import search
 
 
 def main():
@@ -27,10 +29,18 @@ def main():
             test_files += 1
         sys.stdout.write("Number of files in the directory: " + str(test_files) + '\n')
 
+        sys.stdout.write("Testing create_index:\n")
+        create_index(args['docfolder'])
+        sys.stdout.write("Index created!\n")
+
     if args['query']:
         sys.stdout.write("Testing query string:\n")
         query_terms = args['query'].split()
         print(*query_terms, sep=' ')
+
+        sys.stdout.write("Testing search_corpus:\n")
+        search(args['query'])
+        sys.stdout.write("Search successful!\n")
 
     if args['relevant']:
         with open(args['relevant'], 'r') as relevant_file:
