@@ -1,7 +1,6 @@
 import sys
 import os
 import argparse
-import whoosh
 from create_index import create_index
 from search_corpus import search
 
