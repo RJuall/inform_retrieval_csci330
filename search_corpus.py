@@ -13,8 +13,7 @@ def search(query):
 
     ix = index.open_dir("indexdir")
     corpus_size = ix.doc_count()
-    max_results = ceil(0.7 * corpus_size)
-
+    max_results = ceil(corpus_size * 0.6)
     qp = QueryParser("text", schema=ix.schema)
     q = qp.parse(query, True)
 
