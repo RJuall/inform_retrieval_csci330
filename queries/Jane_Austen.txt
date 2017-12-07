@@ -1,0 +1,7 @@
+Emma-austen.txt
+LadySusan-austen.txt
+MansfieldPark-austen.txt
+NorthangerAbbey-austen.txt
+Persuasion-austen.txt
+PrideAndPrejudice-austen.txt
+SenseSensibility-austen.txt
